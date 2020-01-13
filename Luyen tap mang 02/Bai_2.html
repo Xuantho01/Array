@@ -7,13 +7,10 @@
 <body>
 <h3>Mạng hai chiều</h3>
 <script>
-    let a = [];
-    for(let i in a){
-        document.write("Row "+i +"<br>");
-        for(let j in a[i]){
-            document.write(" " + a[i][j]+"<br>");
-        }
-    }
+    let a = ['c','s','c','2','6','1'];
+    document.write("Mảng ban đầu: "+a);
+    a = a.reverse();
+    document.write("<br>Mảng sau khi đảo ngược: " + a);
 </script>
 </body>
 </html>

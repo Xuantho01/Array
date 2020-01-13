@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<h3>Mạng hai chiều</h3>
+<script>
+    let a = ['c','s','c','2','6','1'];
+    document.write("Mảng ký tự: "+ a);
+    document.write("<br>Kích thước mảng: "+ a.length);
+    let count = 0;
+    for(let i = 0; i < a.length; i++){
+        if(isNaN(a[i]) == false) {
+           count += 1;
+        }
+    }
+    document.write("<br> Số ký tự số trong mảng ký tự là: "+count);
+</script>
+</body>
+</html>

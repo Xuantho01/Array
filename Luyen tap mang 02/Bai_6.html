@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<h3>Mạng hai chiều</h3>
+<script>
+    let a = new Array();
+    let b = prompt("Nhập vào số phần tử: ");
+    for (let i = 0; i < b;i++){
+        a[i] = prompt("Nhập vào các ký tự trong mảng: ");
+        if(a[i] == '-'){
+            a[i] = '_';
+        }
+    }
+    document.write(a);
+</script>
+</body>
+</html>
