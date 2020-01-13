@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<h3>Mạng một chiều</h3>
+<script>
+    let arr = [2,3,-5,4,-2,-4,7];
+    document.write(arr);
+    let a = 7;
+    let flag = true;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] == a){
+          flag =true;
+          break;
+        }
+        else {
+            flag = false;
+        }
+    }
+    if (flag){
+        document.write("<br>" + a + " in array");
+    }
+    else{
+        document.write("<br>" + a + " not in array");
+    }
+
+</script>
+</body>
+</html>

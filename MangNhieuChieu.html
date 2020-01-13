@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Mang nhieu chieu</title>
+    <script>
+        let arr;
+        let soDong;
+        let soCot;
+
+          function khoiTao(){
+              soDong = prompt("Nhap so dong: ");
+              soDong = Number.parseInt(soDong);
+
+              soCot = prompt("Nhap so cot: ");
+              soCot = Number.parseInt(soCot);
+
+              let i,j;
+              arr = new Array(soDong);
+              for(i = 0; i < soDong; i++){
+                  arr[i] = new Array(soCot);
+                  for(j = 0; j < soCot; j++){
+                      arr[i][j] = Math.random()*100;
+                  }
+              }
+          }
+          function hienMang(){
+              let i,j;
+              document.write("<table border='1'>");
+              for (i = 0; i < soDong; i++){
+                  document.write("<tr>");
+                  for (j = 0; j < soCot; j++){
+                      document.write("<td>" + arr[i][j] + "</td>");
+
+                  }
+                  document.writeln("</tr>");
+              }
+              document.writeln("</table>");
+          }
+          function tongHang(id){
+             let sum = 0,j;
+             for(j = 0; j < soCot;j++)
+             {
+                 sum += arr[id][j];
+             return sum;
+             }
+          }
+          function tongCot(id){
+              let sum = 0, i;
+              for (i = 0; i < soDong;i++){
+                  sum += arr[id][i];
+                  return sum;
+              }
+
+          }
+          function timMin(){
+             let i,j,min;
+             min = arr[0][0];
+             for(i = 0; i <soDong;i++){
+                 for (j = 0; j < soCot; j++){
+                     if (min > arr[i][j]){
+                         min = arr[i][j];
+                     }
+                 }
+             }
+             return min;
+          }
+          function timMax(){
+              let i,j,max;
+              max = arr[0][0];
+              for(i = 0; i < soDong;i++){
+                  for (j = 0; j < soCot; j++){
+                      if (max < arr[i][j]){
+                          max = arr[i][j];
+                      }
+                  }
+              }
+              return max;
+          }
+          function main(){
+                khoiTao();
+                hienMang();
+                document.writeln("<br> Tong hang 1 la: "+tongHang(1));
+                document.writeln("<br>Tong cot 1 la: "+tongCot(1));
+                document.writeln("<br> Min bang: " + timMin());
+                document.writeln("<br> Max bang: " + timMax());
+          }
+          main();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<input type="text" id="content">
+<input type="button" onclick="TranSlate();" value="dich">
+<p id="write" ></p>
+<script>
+    let english = ['go','eat','write','say'];
+    let vietnamese = ['đi','ăn','viết','nói'];
+  function TranSlate(){
+       let Text = document.getElementById("content").value;
+       for( let i = 0; i < english.length; i++){
+           if(Text == english[i]){
+               document.getElementById('write').innerHTML = "Translated: " + vietnamese[i];
+               break;
+           }
+           else{
+               document.getElementById('write').innerHTML = "Can not find";
+           }
+       }
+  }
+</script>
+</body>
+</html>
