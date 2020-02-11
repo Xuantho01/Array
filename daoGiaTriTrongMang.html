@@ -8,17 +8,37 @@
 <body>
 <h3>Đảo ngược giá trị trong mạng không dùng reverse</h3>
 <script>
-     let x = [1,2,3,-4,5,6];
-     let first = 0;
-     let last = x.length - 1;
-     while(first < last){
-          let b = x[first];
-          x[first] = x[last];
-          x[last] = b;
-          first++;
-          last--;
-     }
-     document.write(x);
+   // đảo ngược phần tử trong mảng dùng vòng lặp for
+    let reverseArrayWithForLoop = function(arr){
+        let tmp;
+        this.arr = arr;
+        for(let i = 0; i < arr.length / 2; i++){
+            tmp = this.arr[i];
+            this.arr[i] = this.arr[this.arr.length - i -1];
+            this.arr[arr.length - i - 1] = tmp;
+        }
+        document.write("Đảo ngược phần tử dùng vòng lặp for: "+"<br>"+this.arr);
+    };
+    // Đảo ngược các phần tử mảng dùng vòng lặp while
+    let reverseArrayWithWhileLoop = function(arr){
+        this.arr = arr;
+        this.first = 0;
+        this.last = this.arr.length - 1;
+        let tmp;
+        while(this.first < this.last){
+            tmp = this.arr[this.first];
+            this.arr[this.first] = this.arr[this.last];
+            this.arr[this.last] = tmp;
+            this.first++;
+            this.last--;
+        }
+        document.write("<br>"+"Đảo ngược phần tử dùng vòng lặp While: "+"<br>"+this.arr);
+    };
+   let array1 = [1,2,3,-1,-2,-3];
+   let array2 = [1,2,3,-1,-2,-3];
+   reverseArrayWithForLoop(array1);
+   reverseArrayWithWhileLoop(array2);
+
 </script>
 </body>
 </html>
